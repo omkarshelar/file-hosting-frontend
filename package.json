@@ -1,0 +1,22 @@
+{
+  "name": "file-hosting-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "dev": "parcel index.html --no-cache",
+    "build": "rm -rf dist/ && parcel build index.html --public-url / && mkdir dist/assets && cp -R src/assets/ dist/"
+  },
+  "author": "Omkar Shelar",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "sass": "^1.26.5",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2",
+    "rxjs": "^6.5.5"
+  }
+}
