@@ -2,7 +2,7 @@ import { progressSub } from "../components/ProgressComponent";
 import { link } from "../components/Link";
 
 class Uploader {
-  APIDomain = "https://3ysaorp2qi.execute-api.ap-south-1.amazonaws.com/prod";
+  APIDomain = "https://fha.omkarshelar.dev";
   constructor() {
     document
       .querySelector("#upload-button")
@@ -27,7 +27,6 @@ class Uploader {
         // Get custom URL to share with user
         let customURI = await this.getCustomURI(response.Key, expiryTime);
         customURI = JSON.parse(customURI);
-        // console.log(`${this.APIDomain}/asset/${customURI.URL}`);
         link.next(`${this.APIDomain}/asset/${customURI.URL}`);
       }
     } catch (err) {
