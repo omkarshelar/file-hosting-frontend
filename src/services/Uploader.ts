@@ -1,6 +1,8 @@
 import { progressSub } from "../components/ProgressComponent";
 import { link } from "../components/Link";
 
+const FH_API_KEY = process.env.FH_API_KEY;
+
 class Uploader {
   APIDomain = "https://fha.omkarshelar.dev";
   constructor() {
@@ -59,6 +61,7 @@ class Uploader {
         `${this.APIDomain}/signed-url-upload/${fileName}`,
         true
       );
+      request.setRequestHeader("x-api-key", FH_API_KEY);
       request.onload = function () {
         if (this.status === 200) {
           resolve(this.response);
@@ -98,6 +101,7 @@ class Uploader {
         `${this.APIDomain}/custom-uri/${key}/${expiryTime}`,
         true
       );
+      request.setRequestHeader("x-api-key", FH_API_KEY);
       request.onload = function () {
         if (this.status === 201) {
           resolve(this.response);
