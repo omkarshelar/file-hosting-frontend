@@ -11,6 +11,8 @@
 Code for the frontend of file hosting application.
 The application is written in [Typescript](https://www.typescriptlang.org/) and [parcel](https://parceljs.org/) bundler.
 
+Ephermal hosting for files. Upload files, get URL of the uploaded file. Share the URL with others!
+
 The files uploaded through this application are deleted within the user specified time.
 
 You can also use the companion [CLI application](https://github.com/omkarshelar/file-hosting-cli) if you wish to automate uploads using bash.
@@ -18,3 +20,6 @@ You can also use the companion [CLI application](https://github.com/omkarshelar/
 The CLI application needs an API Key to function to prevent misuse.
 
 The UI is built with components of [Materialize CSS](https://materializecss.com/)
+
+
+[]
