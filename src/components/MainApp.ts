@@ -24,6 +24,10 @@ const MainApp = async () => {
           <option value="4">1 day</option>
         </select>
       </div>
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate">
+        <label for="password">Password(Keep blank for no password)</label>
+      </div>
       <button id="upload-button" class="waves-effect waves-light btn red">Upload File</button>
       </form>
       <div id="progressComponent"></div>

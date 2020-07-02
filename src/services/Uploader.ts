@@ -37,15 +37,15 @@ class Uploader {
   };
 
   validateFile = () => {
-    // user has not chosen any file
+    // User has not chosen any file
     if (document.querySelector("#file-input").files.length === 0) {
       alert("Error : No file selected");
       return null;
     }
 
-    // first file that was chosen
+    // First file that was chosen
     var file = document.querySelector("#file-input").files[0];
-    // max 1 GB size allowed
+    // Max 1 GB size allowed
     if (file.size > 1024 * 1024 * 1024) {
       alert("Error : Exceeded size 1GB");
       return null;
@@ -108,7 +108,18 @@ class Uploader {
         }
         reject("Could not upload your file. Please try again later!");
       };
-      request.send();
+      let password = document.getElementById("password").value || null;
+      console.log(password);
+      if (!password) {
+        request.send();
+      } else {
+        request.setRequestHeader("content-type", "application/json");
+        request.send(
+          JSON.stringify({
+            password: password,
+          })
+        );
+      }
     });
   }
 
