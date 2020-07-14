@@ -20,6 +20,3 @@ You can also use the companion [CLI application](https://github.com/omkarshelar/
 The CLI application needs an API Key to function to prevent misuse.
 
 The UI is built with components of [Materialize CSS](https://materializecss.com/)
-
-
-[]
